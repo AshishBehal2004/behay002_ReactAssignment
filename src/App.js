@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { StrudelMirror } from '@strudel/codemirror';
 import { evalScope } from '@strudel/core';
 import { drawPianoroll } from '@strudel/draw';
@@ -13,6 +13,7 @@ import DjControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreProcessTextBody from './components/PreProcessTextBody';
+
 let globalEditor = null;
 
 const handleD3Data = (event) => {
@@ -77,6 +78,8 @@ export default function StrudelDemo() {
     const handleStop = () => {
         globalEditor.stop();
     }
+    const [songText, setSongText] = useState(stranger_tune)
+
 
 useEffect(() => {
 
@@ -115,8 +118,8 @@ useEffect(() => {
         //SetupButtons()
         //Proc()
     }
-
-}, []);
+    globalEditor.setCode(songText);
+}, [songText]);
 
 
 return (
@@ -127,7 +130,7 @@ return (
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <PreProcessTextBody/>
+                        <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                     </div>
                     <div className="col-md-4">
 
