@@ -1,17 +1,33 @@
 function DjControls() {
     return (
         <>
+            <div class="input-group mb-3">
+                <span className="input-group-text" id="cpmLabel">SetCpm</span>
+
+                <input type="text" className="form-control" id="cpm_textInput" placeholder="120" aria-label="cpm" aria-describedby="cpmLabel"></input>
+
+            </div>
+            <label for="volumeSlider" className="form-label">Volume</label>
+            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider"></input>
+
+            <div class="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="instrument_1"></input>
+                <label className="form-check-label" for="instrument_1">
+                        Instrument 1
+                    </label>
+            </div>
+
             <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  defaultChecked />
-                <label className="form-check-label" htmlFor="flexRadioDefault1">
-                    p1: ON
-                </label>
+                <input className="form-check-input" type="checkbox" value="" id="instrument_2" ></input>
+                <label className="form-check-label" for="instrument_2">
+                    Instrument 2
+                    </label>
             </div>
             <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  />
-                <label className="form-check-label" htmlFor="flexRadioDefault2">
-                    p1: HUSH
-                </label>
+                <input className="form-check-input" type="checkbox" value="" id="instrument_3" ></input>
+                <label className="form-check-label" for="instrument_3">
+                    Instrument 3
+                    </label>
             </div>
         </>
     );
