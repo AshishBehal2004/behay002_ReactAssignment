@@ -121,6 +121,8 @@ export default function StrudelDemo() {
         }
 
     
+
+
     globalEditor.setCode(songText);
 }, [songText]);
 
