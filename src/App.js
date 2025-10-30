@@ -129,7 +129,7 @@ return (
     <div>
         
         <nav className="navbar navbar-dark bg-dark ">
-            <a class="navbar-brand" href="#"><b>Strudel Demo</b></a>
+            <a class="navbar-brand" href="#"><b><i>Strudel Demo</i></b></a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>
