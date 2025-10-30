@@ -56,3 +56,14 @@
     animation-play-state: running;
 }
 
+.strudelAnimation:hover {
+    animation-play-state: paused;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}

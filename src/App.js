@@ -129,42 +129,64 @@ return (
     <div>
         
         <nav className="navbar navbar-dark bg-dark ">
-            <a className="navbar-brand" >Strudel Demo</a>
+            <a class="navbar-brand" href="#">Strudel Demo</a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>
         </nav>
         
-        
         <main>
-
             <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                       
+
+                <div className="row g-4 p-4">
+                    <div className="col-sm-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                         <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                     </div>
-                    <div className="col-md-4">
-
-                        <nav>
-                            <ProcButtons />
-                            <br />
-                            <PlayButtons onPlay={handlePlay} onStop={handleStop} />
-                        </nav>
+                    <div className="col-sm-5">
+                        <div className="card text-center">
+                            <div className="card-header">Controls</div>
+                            <div className="card-body">
+                                <h5 className="card-title">Special title treatment</h5>
+                                <nav>
+                                    <ProcButtons />
+                                    <br />
+                                    <PlayButtons onPlay={handlePlay} onStop={handleStop} />
+                                </nav>
+                            </div>
+                        </div> 
+                        
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
+
+                <div className="row g-4 p-4">
+                    <div className="col-sm-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                         <div id="editor" />
                         <div id="output" />
                     </div>
-                    <div className="col-md-4">
-                        <DjControls />
+                    <div className="col-sm-5">
+
+                        <div className="card text-center">
+                            <div className="card-header">Controls</div>
+                            <div className="card-body">
+                                <h5 className="card-title">Special title treatment</h5>
+                                <DjControls />
+                            </div>
+                        </div> 
+
+
+                      
                     </div>
                 </div>
+
             </div>
             <canvas id="roll"></canvas>
         </main >
+        <footer className="footer" role="contentinfo">
+            <div className="footer-content" >
+                <p className="footer-text">&copy; 2025 Strudel Demo. All rights reserved</p>
+            </div>
+        </footer>
+        
     </div >
 );
 
