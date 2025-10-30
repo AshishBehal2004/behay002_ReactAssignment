@@ -14,6 +14,7 @@ import DjControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreProcessTextBody from './components/PreProcessTextBody';
+import strudelImage from './icons/strudel_icon.png';
 
 let globalEditor = null;
 
@@ -81,6 +82,7 @@ export default function StrudelDemo() {
     }
     const [songText, setSongText] = useState(stranger_tune)
 
+  
 
     useEffect(() => {
 
@@ -119,23 +121,27 @@ export default function StrudelDemo() {
             //SetupButtons()
             //Proc()
         }
-
-    
-
-
     globalEditor.setCode(songText);
 }, [songText]);
 
 
 return (
     <div>
-        <h2>Strudel Demo</h2>
+        
+        <nav className="navbar navbar-dark bg-dark ">
+            <a className="navbar-brand" >Strudel Demo</a>
+            <div className="strudellogo" >
+                <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
+            </div>
+        </nav>
+        
+        
         <main>
 
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <PreProcessTextBody />
+                       
                         <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                     </div>
                     <div className="col-md-4">
