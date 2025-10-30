@@ -129,7 +129,7 @@ return (
     <div>
         
         <nav className="navbar navbar-dark bg-dark ">
-            <a class="navbar-brand" href="#">Strudel Demo</a>
+            <a class="navbar-brand" href="#"><b>Strudel Demo</b></a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>
@@ -138,16 +138,20 @@ return (
         <main>
             <div className="container-fluid">
 
-                <div className="row g-4 p-4">
+                <div className="row g-4 p-5 ">
                     <div className="col-sm-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
-                    </div>
-                    <div className="col-sm-5">
-                        <div className="card text-center">
-                            <div className="card-header">Controls</div>
+                        <div className="card">
                             <div className="card-body">
+                                <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-5 ">
+                        <div className="card text-center" id="playAndStop">
+                            <div className="card-header"><b>Controls</b></div>
+                            <div className="card-body " >
                                 <h5 className="card-title">Special title treatment</h5>
-                                <nav>
+                                <nav >
                                     <ProcButtons />
                                     <br />
                                     <PlayButtons onPlay={handlePlay} onStop={handleStop} />
@@ -158,15 +162,15 @@ return (
                     </div>
                 </div>
 
-                <div className="row g-4 p-4">
+                <div className="row g-4 p-5">
                     <div className="col-sm-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                         <div id="editor" />
                         <div id="output" />
                     </div>
                     <div className="col-sm-5">
 
-                        <div className="card text-center">
-                            <div className="card-header">Controls</div>
+                        <div className="card text-center" id="djControls">
+                            <div className="card-header"><b>Controls</b></div>
                             <div className="card-body">
                                 <h5 className="card-title">Special title treatment</h5>
                                 <DjControls />

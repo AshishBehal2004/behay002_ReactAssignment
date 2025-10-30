@@ -67,3 +67,11 @@
     background-color: black;
     color: white;
 }
+#playAndStop{
+    border-left: 4px solid #3700ff;
+}
+
+
+#djControls {
+    border-left: 4px solid #3700ff;
+}
