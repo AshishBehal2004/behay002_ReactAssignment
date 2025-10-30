@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\components\\preprocesstextbody.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\preprocesstextbody.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 265,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\public\\index.html",
-              "RelativeDocumentMoniker": "public\\index.html",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\public\\index.html",
-              "RelativeToolTip": "public\\index.html",
-              "ViewState": "AgIAACcAAAAAAAAAAAAuwDIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-28T10:48:57.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "index.js",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\index.js",
-              "RelativeDocumentMoniker": "src\\index.js",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\index.js",
-              "RelativeToolTip": "src\\index.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-28T10:47:04.804Z",
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.css",
+              "RelativeDocumentMoniker": "src\\App.css",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.css",
+              "RelativeToolTip": "src\\App.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-30T02:23:27.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\public\\index.html",
+              "RelativeDocumentMoniker": "public\\index.html",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\public\\index.html",
+              "RelativeToolTip": "public\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-30T04:28:06.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PreProcessTextBody.jsx",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\PreProcessTextBody.jsx",
+              "RelativeDocumentMoniker": "src\\components\\PreProcessTextBody.jsx",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\PreProcessTextBody.jsx",
+              "RelativeToolTip": "src\\components\\PreProcessTextBody.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-10-30T04:19:36.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "App.js",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.js",
               "RelativeDocumentMoniker": "src\\App.js",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.js",
               "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAAwHwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAqwIAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-28T10:34:47.6Z",
               "EditorCaption": ""
