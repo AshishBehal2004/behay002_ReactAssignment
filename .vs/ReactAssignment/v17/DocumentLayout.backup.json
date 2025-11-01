@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\components\\volumecontrol.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\volumecontrol.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\components\\playbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\playbuttons.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 265,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\public\\index.html",
-              "RelativeDocumentMoniker": "public\\index.html",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\public\\index.html",
-              "RelativeToolTip": "public\\index.html",
-              "ViewState": "AgIAACcAAAAAAAAAAAAuwDIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-28T10:48:57.173Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.js",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\index.js",
-              "RelativeDocumentMoniker": "src\\index.js",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\index.js",
-              "RelativeToolTip": "src\\index.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-28T10:47:04.804Z",
+              "Title": "VolumeControl.jsx",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\VolumeControl.jsx",
+              "RelativeDocumentMoniker": "src\\components\\VolumeControl.jsx",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\VolumeControl.jsx",
+              "RelativeToolTip": "src\\components\\VolumeControl.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-01T06:39:43.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayButtons.jsx",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\PlayButtons.jsx",
+              "RelativeDocumentMoniker": "src\\components\\PlayButtons.jsx",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\PlayButtons.jsx",
+              "RelativeToolTip": "src\\components\\PlayButtons.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-01T04:57:07.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "App.js",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.js",
               "RelativeDocumentMoniker": "src\\App.js",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.js",
               "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAAwHwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-28T10:34:47.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T10:34:47.6Z"
             }
           ]
         }

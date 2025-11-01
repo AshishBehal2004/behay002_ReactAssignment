@@ -10,10 +10,12 @@ import { getAudioContext, webaudioOutput, registerSynthSounds } from '@strudel/w
 import { registerSoundfonts } from '@strudel/soundfonts';
 import { stranger_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
+//UI Components being used 
 import DjControls from './components/DJControls';
 import PlayButtons from './components/PlayButtons';
 import ProcButtons from './components/ProcButtons';
 import PreProcessTextBody from './components/PreProcessTextBody';
+//image logo appearing on page
 import strudelImage from './icons/strudel_icon.png';
 
 let globalEditor = null;
@@ -23,7 +25,6 @@ const handleD3Data = (event) => {
 };
 
 //export function SetupButtons() {
-
 //    document.getElementById('play').addEventListener('click', () => globalEditor.evaluate());
 //    document.getElementById('stop').addEventListener('click', () => globalEditor.stop());
 //    document.getElementById('process').addEventListener('click', () => {
@@ -38,8 +39,6 @@ const handleD3Data = (event) => {
 //    }
 //    )
 //}
-
-
 
 //export function ProcAndPlay() {
 //    if (globalEditor != null && globalEditor.repl.state.started == true) {
@@ -60,9 +59,9 @@ const handleD3Data = (event) => {
 //export function ProcessText(match, ...args) {
 
 //    let replace = ""
-//    //if (document.getElementById('flexRadioDefault2').checked) {
-//    //    replace = "_"
-//    //}
+//    if (document.getElementById('flexRadioDefault2').checked) {
+//        replace = "_"
+//    }
 
 //    return replace
 //}
@@ -81,8 +80,6 @@ export default function StrudelDemo() {
         globalEditor.stop();
     }
     const [songText, setSongText] = useState(stranger_tune)
-
-  
 
     useEffect(() => {
 
@@ -121,6 +118,7 @@ export default function StrudelDemo() {
             //SetupButtons()
             //Proc()
         }
+        //Below it will update the strudel editor, when songText changes
     globalEditor.setCode(songText);
 }, [songText]);
 
@@ -129,7 +127,7 @@ return (
     <div>
         
         <nav className="navbar navbar-dark bg-dark ">
-            <a class="navbar-brand" href="#"><b><i>Strudel Demo</i></b></a>
+            <a className="navbar-brand" ><b><i>Strudel Demo</i></b></a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>
@@ -145,12 +143,13 @@ return (
                                 <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                             </div>
                         </div>
+                        
                     </div>
                     <div className="col-sm-5 ">
                         <div className="card text-center" id="playAndStop">
-                            <div className="card-header"><b>Controls</b></div>
+                            <div className="card-header fs-2" ><i><b>Controls</b></i></div>
                             <div className="card-body " >
-                                <h5 className="card-title">Special title treatment</h5>
+                                <h5 className="card-title">Play the Beat</h5>
                                 <nav >
                                     <ProcButtons />
                                     <br />
@@ -170,15 +169,13 @@ return (
                     <div className="col-sm-5">
 
                         <div className="card text-center" id="djControls">
-                            <div className="card-header"><b>Controls</b></div>
+                            <div className="card-header fs-2"><i><b>Controls</b></i></div>
                             <div className="card-body">
-                                <h5 className="card-title">Special title treatment</h5>
+                                <h5 className="card-title">Change Cpm</h5>
                                 <DjControls />
                             </div>
-                        </div> 
-
-
-                      
+                        </div>
+                        
                     </div>
                 </div>
 
