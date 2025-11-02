@@ -10,7 +10,7 @@ export default function DjControls({ songText, setSongText }) {
         main_arp: false
     })
 
-    
+
     function handleMute(sectionName) {
         return (event) => {
 
@@ -21,9 +21,10 @@ export default function DjControls({ songText, setSongText }) {
 
             if (isMuted) {
                 console.log("Muting", sectionName)
+                setSongText(prev => prev.replace(sectionName + ':' , '// ' + sectionName + ':'));
             }
             else {
-                console.log("Unmuting", sectionName)
+                setSongText(prev => prev.replace('// '+ sectionName + ':', sectionName + ':'));
             }
             //setSongText(() => result )    
             console.log("Before", songText)
@@ -43,7 +44,7 @@ export default function DjControls({ songText, setSongText }) {
 
             <label className='instrument-label fs-5' ><b>Toggle Instrument On/Off</b></label>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="instrument_1" onChange={handleMute}></input>
+                <input className="form-check-input" type="checkbox" value="" id="instrument_1" onChange={handleMute('drums')}></input>
                 <label className="form-check-label" htmlFor="instrument_1" >
                         Instrument 1
                     </label>
