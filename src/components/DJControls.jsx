@@ -1,5 +1,14 @@
+import { useRef, useState } from 'react';
 export default function DjControls({ songText, setSongText }) {
 
+    const orginalBeat = useRef(songText)
+
+    const [muted, setMuted] = useState({
+        drums: false,
+        drums2: false,
+        bassline: false,
+        main_arp: false
+    })
     function handleMute(event) {
         if (event.target.checked) {
             setSongText(prev => prev.replaceAll('<p1_Radio>', '_'))
