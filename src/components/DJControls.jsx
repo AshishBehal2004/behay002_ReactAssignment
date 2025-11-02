@@ -9,16 +9,26 @@ export default function DjControls({ songText, setSongText }) {
         bassline: false,
         main_arp: false
     })
-    function handleMute(event) {
-        if (event.target.checked) {
-            setSongText(prev => prev.replaceAll('<p1_Radio>', '_'))
-        }
-        else {
-            setSongText(prev => prev.replaceAll('_', ' < p1_Radio > '))
 
+    
+    function handleMute(sectionName) {
+        return (event) => {
+
+            const isMuted = event.target.checked
+            setMuted(prev => ({
+                ...prev, [sectionName]: isMuted
+            }));
+
+            if (isMuted) {
+                console.log("Muting", sectionName)
+            }
+            else {
+                console.log("Unmuting", sectionName)
+            }
+            //setSongText(() => result )    
+            console.log("Before", songText)
         }
-        //setSongText(() => result )    
-        console.log("Before", songText)
+        
     }
     return (
         <>
