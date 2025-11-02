@@ -1,4 +1,4 @@
-function PlayButtons({onPlay, onStop }) {
+export default function PlayButtons({onPlay, onStop }) {
 
     return (
         <>
@@ -9,4 +9,3 @@ function PlayButtons({onPlay, onStop }) {
         </>
     );
 }
-export default PlayButtons;

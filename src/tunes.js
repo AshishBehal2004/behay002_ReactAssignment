@@ -50,7 +50,7 @@ note(pick(basslines, bass))
 
 
 main_arp: 
-note(pick(arpeggiator1, "<0 1 2 3>/2"))
+note(pick(arpeggiator1, "<0 1 2 3>/2 "))
 .sound("supersaw")
 .lpf(300)
 .adsr("0:0:.5:.1")
@@ -61,32 +61,32 @@ note(pick(arpeggiator1, "<0 1 2 3>/2"))
 
 drums:
 stack(
-  s("tech:5")
+  s("tech:5 <p1_Radio> " )
   .postgain(6)
   .pcurve(2)
   .pdec(1)
   .struct(pick(drum_structure, pattern)),
 
-  s("sh").struct("[x!3 ~!2 x!10 ~]")
+  s("sh <p1_Radio>").struct("[x!3 ~!2 x!10 ~] ")
   .postgain(0.5).lpf(7000)
   .bank("RolandTR808")
   .speed(0.8).jux(rev).room(sine.range(0.1,0.4)).gain(0.6),
 
-  s("{~ ~ rim ~ cp ~ rim cp ~!2 rim ~ cp ~ < rim ~ >!2}%8 *2")
+  s("{~ ~ rim ~ cp ~ rim cp ~!2 rim ~ cp ~ < rim ~ >!2}%8 *2 ")
   .bank("[KorgDDM110, OberheimDmx]").speed(1.2)
   .postgain(.25),
 )
 
 drums2: 
 stack(
-  s("[~ hh]*4").bank("RolandTR808").room(0.3).speed(0.75).gain(1.2),
-  s("hh").struct("x*16").bank("RolandTR808")
+  s("[~ hh]*4 <p1_Radio>").bank("RolandTR808").room(0.3).speed(0.75).gain(1.2),
+  s("hh").struct("x*16").bank("RolandTR808 ")
   .gain(0.6)
   .jux(rev)
   .room(sine.range(0.1,0.4))
   .postgain(0.5),
   
-  s("[psr:[2|5|6|7|8|9|12|24|25]*16]?0.1")
+  s("[psr:[2|5|6|7|8|9|12|24|25]*16]?0.1  ")
   .gain(0.1)
   .postgain(pick(gain_patterns, pattern))
   .hpf(1000)

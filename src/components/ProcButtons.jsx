@@ -1,4 +1,4 @@
-function ProcButtons() {
+export default function ProcButtons() {
     return (
         <>    
         <div className="btn-group">
@@ -8,4 +8,3 @@ function ProcButtons() {
         </>
     );
 }
-export default ProcButtons;

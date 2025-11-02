@@ -127,7 +127,7 @@ return (
     <div>
         
         <nav className="navbar navbar-dark bg-dark ">
-            <a className="navbar-brand" ><b><i>Strudel Demo</i></b></a>
+            <a className="navbar-brand fs-1" ><b><i>Strudel Demo</i></b></a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>
@@ -147,10 +147,10 @@ return (
                     </div>
                     <div className="col-sm-5 ">
                         <div className="card text-center" id="playAndStop">
-                            <div className="card-header fs-2" ><i><b>Controls</b></i></div>
+                            <div className="card-header fs-3" ><b>Controls</b></div>
                             <div className="card-body " >
                                 <h5 className="card-title">Play the Beat</h5>
-                                <nav >
+                                <nav  >
                                     <ProcButtons />
                                     <br />
                                     <PlayButtons onPlay={handlePlay} onStop={handleStop} />
@@ -169,10 +169,10 @@ return (
                     <div className="col-sm-5">
 
                         <div className="card text-center" id="djControls">
-                            <div className="card-header fs-2"><i><b>Controls</b></i></div>
+                            <div className="card-header fs-1"><b>Controls</b></div>
                             <div className="card-body">
-                                <h5 className="card-title">Change Cpm</h5>
-                                <DjControls />
+                                <h5 className="card-title"><b>Change Cpm</b></h5>
+                                <DjControls songText={songText} setSongText={setSongText} />
                             </div>
                         </div>
                         
