@@ -32,12 +32,15 @@ export default function DjControls({ songText, setSongText }) {
         }
         
     }
+    const [cpm, setCpm] = useState(20)
+    function handleCpm(inputValue) {
+
+    }
     return (
         <>
             <div className="input-group mb-3">
                 <span className="input-group-text" id="cpmLabel">SetCpm</span>
-
-                <input type="text" className="form-control" id="cpm_textInput" placeholder="120" aria-label="cpm" aria-describedby="cpmLabel"></input>
+                <input type="number" className="form-control" id="cpm_textInput" placeholder="120" aria-label="cpm" aria-describedby="cpmLabel" value={cpm} onChange={handleCpm }></input>
 
             </div>
             <label htmlFor="volumeSlider" className="form-label fs-5"><b>Volume</b></label>
