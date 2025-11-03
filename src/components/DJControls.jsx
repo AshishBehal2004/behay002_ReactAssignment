@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 export default function DjControls({ songText, setSongText }) {
 
-    const orginalBeat = useRef(songText)
+    
 
     const [muted, setMuted] = useState({
         drums: false,
@@ -14,17 +14,18 @@ export default function DjControls({ songText, setSongText }) {
     function handleMute(sectionName) {
         return (event) => {
 
-            const isMuted = event.target.checked
+            const isChecked = event.target.checked
+            const shouldBeMuted = isChecked
             setMuted(prev => ({
-                ...prev, [sectionName]: isMuted
+                ...prev, [sectionName]: shouldBeMuted
             }));
 
-            if (isMuted) {
+            if (shouldBeMuted) {
                 console.log("Muting", sectionName)
-                setSongText(prev => prev.replace(sectionName + ':' , '// ' + sectionName + ':'));
+                setSongText(prev => prev.replace(sectionName + ':' , '_' + sectionName + ':'));
             }
             else {
-                setSongText(prev => prev.replace('// '+ sectionName + ':', sectionName + ':'));
+                setSongText(prev => prev.replace('_'+ sectionName + ':', sectionName + ':'));
             }
             //setSongText(() => result )    
             console.log("Before", songText)
@@ -44,11 +45,30 @@ export default function DjControls({ songText, setSongText }) {
 
             <label className='instrument-label fs-5' ><b>Toggle Instrument On/Off</b></label>
             <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="instrument_1" onChange={handleMute('drums')}></input>
-                <label className="form-check-label" htmlFor="instrument_1" >
-                        Instrument 1
+                <input className="form-check-input" type="checkbox" value="" id="instrument_drums" onChange={handleMute('drums')} defaultChecked={false}></input>
+                <label className="form-check-label" htmlFor="instrument_drums" >
+                       Drums
                     </label>
             </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="instrument_drums2" onChange={handleMute('drums2')} defaultChecked={false }></input>
+                <label className="form-check-label" htmlFor="instrument_drums2" >
+                        Drums 2
+                    </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="instrument_basslines" onChange={handleMute('basslines')} defaultChecked={false}></input>
+                <label className="form-check-label" htmlFor="instrument_basslines" >
+                        basslines
+                    </label>
+            </div>
+            <div className="form-check">
+                <input className="form-check-input" type="checkbox" value="" id="instrument_main_arp" onChange={handleMute('main_arp')} defaultChecked={false}></input>
+                <label className="form-check-label" htmlFor="instrument_main_arp" >
+                        main_arp
+                    </label>
+            </div>
+           
 
            
         </>
