@@ -34,10 +34,10 @@ export default function DjControls({ songText, setSongText }) {
     }
     const [cpm, setCpm] = useState(20)
     function handleCpm(event) {
-        const newCpm = event.target.value
+        const newCpm = parseInt(event.target.value)
 
-        setCpm(newValue)
-        setSongText(prev => prev.replace('/setcps\(\d+\/60\/4\)/', `setcps(${newCpm}/60/4)`))
+        setCpm(newCpm)
+        setSongText(prev => prev.replace(/setcps\(\d+\/60\/4\)/, `setcps(${newCpm}/60/4)`))
     }
     return (
         <>
