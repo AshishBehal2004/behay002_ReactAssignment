@@ -2,7 +2,7 @@
 import './App.css';
 import { useEffect, useRef, useState } from "react";
 import { StrudelMirror } from '@strudel/codemirror';
-import { evalScope } from '@strudel/core';
+import { cpm, evalScope } from '@strudel/core';
 import { drawPianoroll } from '@strudel/draw';
 import { initAudioOnFirstClick } from '@strudel/webaudio';
 import { transpiler } from '@strudel/transpiler';
@@ -130,7 +130,7 @@ return (
                             <div className="card-header fs-1"><b>Controls</b></div>
                             <div className="card-body">
                                 <h5 className="card-title"><b>Change Cpm</b></h5>
-                                <DjControls songText={songText} setSongText={setSongText} />
+                                <DjControls songText={songText} setSongText={setSongText}  />
                             </div>
                         </div>
                         

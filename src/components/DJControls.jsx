@@ -10,6 +10,7 @@ export default function DjControls({ songText, setSongText }) {
         main_arp: false
     })
 
+    const [cpm, setCpm] = useState(20)
 
     function handleMute(sectionName) {
         return (event) => {
@@ -32,12 +33,15 @@ export default function DjControls({ songText, setSongText }) {
         }
         
     }
-    const [cpm, setCpm] = useState(20)
+
     function handleCpm(event) {
         const newCpm = parseInt(event.target.value)
 
-        setCpm(newCpm)
-        setSongText(prev => prev.replace(/setcps\(\d+\/60\/4\)/, `setcps(${newCpm}/60/4)`))
+        if (!isNaN(newCpm)) {
+            setCpm(newCpm)
+            setSongText(prev => prev.replace(/setcps\(\d+\/60\/4\)/, `setcps(${newCpm}/60/4)`))
+        }
+        
     }
     return (
         <>
