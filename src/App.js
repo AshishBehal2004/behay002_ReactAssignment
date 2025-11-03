@@ -17,7 +17,6 @@ import ProcButtons from './components/ProcButtons';
 import PreProcessTextBody from './components/PreProcessTextBody';
 //image logo appearing on page
 import strudelImage from './icons/strudel_icon.png';
-
 let globalEditor = null;
 
 const handleD3Data = (event) => {
@@ -105,9 +104,8 @@ return (
                     </div>
                     <div className="col-sm-5 ">
                         <div className="card text-center" id="playAndStop">
-                            <div className="card-header fs-3" ><b>Controls</b></div>
+                            <div className="card-header fs-3" ><b>Play Beat</b></div>
                             <div className="card-body " >
-                                <h5 className="card-title">Play the Beat</h5>
                                 <nav  >
                                     <ProcButtons />
                                     <br />
@@ -127,7 +125,7 @@ return (
                     <div className="col-sm-5">
 
                         <div className="card text-center" id="djControls">
-                            <div className="card-header fs-1"><b>Controls</b></div>
+                            <div className="card-header fs-1"><b>DJ Controls</b></div>
                             <div className="card-body">
                                 <h5 className="card-title"><b>Change Cpm</b></h5>
                                 <DjControls songText={songText} setSongText={setSongText}  />
@@ -138,7 +136,7 @@ return (
                 </div>
 
             </div>
-            <canvas id="roll"></canvas>
+            <canvas id="roll" ></canvas>
         </main >
         <footer className="footer" role="contentinfo">
             <div className="footer-content" >

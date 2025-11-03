@@ -1,9 +1,14 @@
 export default function ProcButtons() {
     return (
         <>    
-        <div className="button-group mr-4">
-            <button id="process"  className="btn btn-primary">Preprocess</button>
-            <button id="process_play" className="btn btn-primary">Proc & Play</button>
+            <div className="row">
+                <div className="col">
+                    <button id="process" className="btn btn-primary btn-lg">Preprocess</button>
+
+                </div>
+                <div className="col">
+                    <button id="process_play" className="btn btn-primary btn-lg">Proc & Play</button>
+                </div>
         </div>
         </>
     );
