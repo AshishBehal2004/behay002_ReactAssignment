@@ -1,17 +1,16 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 export default function DjControls({ songText, setSongText }) {
 
     
-
+    
     const [muted, setMuted] = useState({
         drums: false,
         drums2: false,
         bassline: false,
         main_arp: false
     })
-
-    const [cpm, setCpm] = useState(20)
-
+    const [cpm, setCpm] = useState(140)
+    const [volume, setVolume] = useState(0.1)
     function handleMute(sectionName) {
         return (event) => {
 
@@ -43,15 +42,19 @@ export default function DjControls({ songText, setSongText }) {
         }
         
     }
+
+    function handleVolume(event) {
+        const newVolume = parseFloat(event.target.value);
+        setVolume(newVolume);
+    }
     return (
         <>
-            <div className="input-group mb-3">
-                <span className="input-group-text" id="cpmLabel">SetCpm</span>
-                <input type="number" className="form-control" id="cpm_textInput" placeholder="120" aria-label="cpm" aria-describedby="cpmLabel" value={cpm} onChange={handleCpm }></input>
-
+            <div className="mb-3">
+                <label >{cpm }</label>
+                <input type="range" className="form-range" id="cpm_textInput"aria-describedby="cpmLabel" value={cpm} onChange={handleCpm} data-bs-toggle="tooltip" data-bs-placement="top" title="Drag the slider to increase/decrease the Cpm" min='1' max='300'></input>
             </div>
             <label htmlFor="volumeSlider" className="form-label fs-5"><b>Volume</b></label>
-            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider"></input>
+            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider" value={volume} onChange={handleVolume}></input>
 
             <label className='instrument-label fs-5' ><b>Toggle Instrument On/Off</b></label>
             <div className="form-check">

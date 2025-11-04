@@ -80,8 +80,8 @@ export default function StrudelDemo() {
 }, [songText]);
 
 
-return (
-    <div>
+    return (
+        <div>
         
         <nav className="navbar navbar-dark bg-dark ">
             <a className="navbar-brand fs-1" ><b><i>Strudel Demo</i></b></a>
