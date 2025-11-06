@@ -12,8 +12,6 @@ import { stranger_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 //UI Components being used 
 import DjControls from './components/DJControls';
-import PlayButtons from './components/PlayButtons';
-import ProcButtons from './components/ProcButtons';
 import PreProcessTextBody from './components/PreProcessTextBody';
 //image logo appearing on page
 import strudelImage from './icons/strudel_icon.png';
@@ -115,19 +113,7 @@ export default function StrudelDemo() {
                         </div>
                         
                     </div>
-                    <div className="col-sm-5 ">
-                        <div className="card text-center" id="playAndStop">
-                            <div className="card-header fs-3" ><b>Play Beat</b></div>
-                            <div className="card-body " >
-                                <nav  >
-                                    <ProcButtons />
-                                    <br />
-                                    <PlayButtons onPlay={handlePlay} onStop={handleStop} />
-                                </nav>
-                            </div>
-                        </div> 
-                        
-                    </div>
+                  
                 </div>
 
                 <div className="row g-4 p-5">
@@ -141,7 +127,7 @@ export default function StrudelDemo() {
                             <div className="card-header fs-1"><b>DJ Controls</b></div>
                             <div className="card-body">
                                     <h5 className="card-title"><b>Change Cpm</b></h5>
-                                    <DjControls songText={songText} setSongText={setSongText} volume={volume} setVolume={setVolume} />  
+                                    <DjControls songText={songText} setSongText={setSongText} volume={volume} setVolume={setVolume} onPlay={handlePlay} onStop={handleStop} />  
                             </div>
                         </div>
                         

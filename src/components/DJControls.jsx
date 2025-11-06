@@ -1,5 +1,5 @@
 import { useState } from 'react';
-export default function DjControls({ songText, setSongText, volume, setVolume }) {
+export default function DjControls({ songText, setSongText, volume, setVolume, onPlay, onStop }) {
 
     
     
@@ -49,6 +49,22 @@ export default function DjControls({ songText, setSongText, volume, setVolume })
         //all(x => x.gain(0.5))
         setSongText(prev => prev.replace(/all\(x\s*=> x\.gain\([0-9.]+\)\)/, `all(x => x.gain(${newVolume}))`));
     }
+
+    function handlePreProcess() {
+        setSongText(curr => {
+            //storing current songText that will be replaced with new values
+            let processedText = curr;
+            //here it replaces the <CPM> text with 140(as a string), and same with <VOLUME> with 0.8(also as a string), then returns them back to 
+            processedText = processedText.replace(/<CPM>/, '140');
+            processedText = processedText.replace(/<VOLUME>/, '0.8');
+            return processedText;
+        })
+    }
+
+
+    function handleProcAndPlay() {
+        
+    }
     return (
         <>
             <div className="mb-3">
@@ -83,9 +99,27 @@ export default function DjControls({ songText, setSongText, volume, setVolume })
                         main_arp
                     </label>
             </div>
-           
+            <div className='container-fluid '>
+                <div className="row p-3 g-1">
+                    <div className="col">
+                        <button id="process" className="btn btn-primary btn-sm" onClick={handlePreProcess}>Preprocess</button>
 
-           
+                    </div>
+                    <div className="col">
+                        <button id="process_play" className="btn btn-primary btn-sm" onClick={handleProcAndPlay}>Proc&Play</button>
+                    </div>
+                </div>
+
+                <div className="row p-3 g-1">
+                    <div className="col">
+                        <button id="play" className="btn btn-primary btn-sm" onClick={onPlay}>Play</button>
+                    </div>
+                    <div className="col">
+                        <button id="stop" className="btn btn-danger btn-sm" onClick={onStop} >Stop</button>
+                    </div>
+                </div>
+            </div>
+            
         </>
     );
 
