@@ -31,14 +31,17 @@ export default function StrudelDemo() {
     const handlePlay = () => {
         //Plays the code
         globalEditor.evaluate();
+        setIsPlaying(true);
     }
 
     const handleStop = () => {
         globalEditor.stop();
+        setIsPlaying(false);
     }
     const [songText, setSongText] = useState(stranger_tune)
 
     const [volume, setVolume] = useState(0.5);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
         
@@ -76,8 +79,14 @@ export default function StrudelDemo() {
         }
 
         //Below it will update the strudel editor, when songText changes
-    globalEditor.setCode(songText);
-}, [songText]);
+        if (globalEditor) {
+            globalEditor.setCode(songText);
+            if (isPlaying) {
+                globalEditor.evaluate();
+            }
+        }
+
+}, [songText, isPlaying]);
 
     return (
         <div>

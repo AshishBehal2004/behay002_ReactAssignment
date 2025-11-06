@@ -97,4 +97,5 @@ stack(
 // all(x => x.gain(mouseX.range(0,1)))
 // all(x => x.log())
 
+all(x => x.gain(0.5))
 // @version 1.2`;

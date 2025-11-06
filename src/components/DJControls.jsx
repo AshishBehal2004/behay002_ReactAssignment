@@ -44,10 +44,10 @@ export default function DjControls({ songText, setSongText, volume, setVolume })
 
     function handleVolume(event) {
         const newVolume = parseFloat(event.target.value);
+        console.log(newVolume);
         setVolume(newVolume);
-
-        setSongText(prev => prev.replace(/\.gain\(/))
-        
+        //all(x => x.gain(0.5))
+        setSongText(prev => prev.replace(/all\(x => x\.gain\([0-9.]+\)\)/, `all(x => x.gain(${newVolume}))`));
     }
     return (
         <>
@@ -55,8 +55,8 @@ export default function DjControls({ songText, setSongText, volume, setVolume })
                 <label >{cpm }</label>
                 <input type="range" className="form-range" id="cpm_textInput"aria-describedby="cpmLabel" value={cpm} onChange={handleCpm} data-bs-toggle="tooltip" data-bs-placement="top" title="Drag the slider to increase/decrease the Cpm" min='1' max='300'></input>
             </div>
-            <label htmlFor="volumeSlider" className="form-label fs-5"><b>Volume</b></label>
-            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider" ></input>
+            <label htmlFor="volumeSlider" className="form-label fs-5" ><b>Volume</b></label>
+            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider" value={volume} onChange={handleVolume} ></input>
 
             <label className='instrument-label fs-5' ><b>Toggle Instrument On/Off</b></label>
             <div className="form-check">
