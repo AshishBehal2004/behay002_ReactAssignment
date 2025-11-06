@@ -38,8 +38,10 @@ export default function StrudelDemo() {
     }
     const [songText, setSongText] = useState(stranger_tune)
 
-    useEffect(() => {
+    const [volume, setVolume] = useState(0.5);
 
+    useEffect(() => {
+        
         if (!hasRun.current) {
             document.addEventListener("d3Data", handleD3Data);
             console_monkey_patch();
@@ -70,15 +72,12 @@ export default function StrudelDemo() {
                     await Promise.all([loadModules, registerSynthSounds(), registerSoundfonts()]);
                 },
             });
-
             document.getElementById('proc').value = stranger_tune
-            //SetupButtons()
-            //Proc()
         }
+
         //Below it will update the strudel editor, when songText changes
     globalEditor.setCode(songText);
 }, [songText]);
-
 
     return (
         <div>
@@ -127,8 +126,8 @@ export default function StrudelDemo() {
                         <div className="card text-center" id="djControls">
                             <div className="card-header fs-1"><b>DJ Controls</b></div>
                             <div className="card-body">
-                                <h5 className="card-title"><b>Change Cpm</b></h5>
-                                <DjControls songText={songText} setSongText={setSongText}  />
+                                    <h5 className="card-title"><b>Change Cpm</b></h5>
+                                    <DjControls songText={songText} setSongText={setSongText} volume={volume} setVolume={setVolume} />  
                             </div>
                         </div>
                         
