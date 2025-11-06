@@ -47,7 +47,7 @@ export default function DjControls({ songText, setSongText, volume, setVolume })
         console.log(newVolume);
         setVolume(newVolume);
         //all(x => x.gain(0.5))
-        setSongText(prev => prev.replace(/all\(x => x\.gain\([0-9.]+\)\)/, `all(x => x.gain(${newVolume}))`));
+        setSongText(prev => prev.replace(/all\(x\s*=> x\.gain\([0-9.]+\)\)/, `all(x => x.gain(${newVolume}))`));
     }
     return (
         <>

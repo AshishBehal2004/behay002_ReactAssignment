@@ -31,16 +31,20 @@ export default function StrudelDemo() {
     const handlePlay = () => {
         //Plays the code
         globalEditor.evaluate();
+        //when being played, it sets the state to true, 
         setIsPlaying(true);
     }
 
     const handleStop = () => {
         globalEditor.stop();
+        //when music is paused, it changes the state 
         setIsPlaying(false);
     }
     const [songText, setSongText] = useState(stranger_tune)
 
     const [volume, setVolume] = useState(0.5);
+
+    //for tracking where music is playing or not
     const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
@@ -77,15 +81,16 @@ export default function StrudelDemo() {
             });
             document.getElementById('proc').value = stranger_tune
         }
-
-        //Below it will update the strudel editor, when songText changes
         if (globalEditor) {
+            //updates the strudel editor with new code after using a feature(dj buttons to change the rhythm)
             globalEditor.setCode(songText);
+            //below restart the strudel editor with new code if the music is playing 
             if (isPlaying) {
+                //here, it stops old music(before pressing any dj buttons), and starts the new music(afte rpressing dj butons)
                 globalEditor.evaluate();
             }
         }
-
+//runs the whole code above(function), when songText value and isPlaying value changes, everytime.  
 }, [songText, isPlaying]);
 
     return (
