@@ -93,17 +93,14 @@ export default function StrudelDemo() {
 
     return (
         <div>
-        
         <nav className="navbar navbar-dark bg-dark ">
             <a className="navbar-brand fs-1" ><b><i>Strudel Demo</i></b></a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>
         </nav>
-        
         <main>
             <div className="container-fluid">
-
                 <div className="row g-4 p-5 ">
                     <div className="col-sm-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                         <div className="card">
@@ -111,25 +108,23 @@ export default function StrudelDemo() {
                                 <PreProcessTextBody defaultValue={songText} onChange={(e) => setSongText(e.target.value)} />
                             </div>
                         </div>
-                        
                     </div>
-                  
+                        <div className="col-sm-5" style={{ maxHeight: '50vh' }}>
+                            <div className="card text-center" id="djControls">
+                                <div className="card-header fs-1"><b>DJ Controls</b></div>
+                                <div className="card-body">
+                                    <h5 className="card-title"><b>Change Cpm</b></h5>
+                                    <DjControls songText={songText} setSongText={setSongText} volume={volume} setVolume={setVolume} onPlay={handlePlay} onStop={handleStop} />
+                                </div>
+                            </div>
+                        </div>
                 </div>
-
                 <div className="row g-4 p-5">
                     <div className="col-sm-7" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
                         <div id="editor" />
                         <div id="output" />
                     </div>
                     <div className="col-sm-5">
-
-                        <div className="card text-center" id="djControls">
-                            <div className="card-header fs-1"><b>DJ Controls</b></div>
-                            <div className="card-body">
-                                    <h5 className="card-title"><b>Change Cpm</b></h5>
-                                    <DjControls songText={songText} setSongText={setSongText} volume={volume} setVolume={setVolume} onPlay={handlePlay} onStop={handleStop} />  
-                            </div>
-                        </div>
                         
                     </div>
                 </div>
