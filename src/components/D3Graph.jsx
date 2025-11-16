@@ -3,12 +3,17 @@ import * as d3 from 'd3';
 function D3Graph({strudelData }) {
 
     const svgRef = useRef(null);
-    const data = [10, 25, 40, 15, 30];
+
+    
     useEffect(() => {
+
+        if (!strudelData || strudelData.length === 0) {
+            return;
+        }
         const svg = d3.select(svgRef.current)
         const barWidth = 20;
         const svgHeight = 150;
-        const maxValue = d3.max(data);
+        const maxValue = d3.max(strudelData);
 
         const yScale = d3.scaleLinear()
             .domain([0, maxValue])
@@ -19,7 +24,7 @@ function D3Graph({strudelData }) {
 
         svg
             .selectAll("rect")
-            .data(data)
+            .data(strudelData)
             .enter()
             .append("rect")
             .attr("x", (d, i) => i * barWidth)
@@ -27,7 +32,7 @@ function D3Graph({strudelData }) {
             .attr("width", barWidth - 2)
             .attr("height", d => svgHeight - yScale(d))
             .append("fill", "skyblue");
-    },[])
+    }, [strudelData])
 
 
     return (

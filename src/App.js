@@ -46,6 +46,8 @@ export default function StrudelDemo() {
     //for tracking where music is playing or not
     const [isPlaying, setIsPlaying] = useState(false);
 
+    //for the strudel data (returned through .log) to handle its values 
+    const [graphData, setGraphData] = useState([]);
     useEffect(() => {
         
         if (!hasRun.current) {
@@ -92,6 +94,15 @@ export default function StrudelDemo() {
 //runs the whole code above(function), when songText value and isPlaying value changes, everytime.  
 }, [songText, isPlaying]);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const StrudelData = getD3Data()
+            setGraphData([...StrudelData])
+            console.log(StrudelData);
+        }, 200)
+        return () => clearInterval(interval);
+    }, [])
+    
     return (
         <div>
         <nav className="navbar navbar-dark bg-dark ">
@@ -129,7 +140,7 @@ export default function StrudelDemo() {
                         
                     </div>
                     </div>
-                    <div><D3Graph /></div>
+                    <div><D3Graph data={graphData} /></div>
             </div>
             <canvas id="roll" ></canvas>
         </main >
