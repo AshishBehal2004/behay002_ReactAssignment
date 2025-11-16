@@ -140,13 +140,14 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
                     <div className="col">
                         <button id="stop" className="btn btn-danger btn-sm" onClick={onStop} >Stop</button>
                     </div>
+                    <div className="col">
+                        <button type='button' id="save" className="btn btn-primary btn-sm" onClick={handleSave}>SAVE CONTROLS</button>
+                    </div>
+                    <div className="col">
+                        <button type='button' id="load" className="btn btn-info btn-sm" onClick={loadSaved}><b>LOAD CONTROLS</b></button>
+                    </div>
                 </div>
-                <div >
-                    <button type='button' id="save" className="btn btn-primary btn-sm" onClick={handleSave}>SAVE</button>
-                </div>
-                <div >
-                    <button type='button' id="load" className="btn btn-secondary btn-sm" onClick={loadSaved}>LOAD</button>
-                </div>
+               
             </div>
         </>
     );

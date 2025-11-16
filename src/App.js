@@ -13,6 +13,7 @@ import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 //UI Components being used 
 import DjControls from './components/DJControls';
 import PreProcessTextBody from './components/PreProcessTextBody';
+import D3Graph from './components/D3Graph';
 //image logo appearing on page
 import strudelImage from './icons/strudel_icon.png';
 let globalEditor = null;
@@ -127,8 +128,8 @@ export default function StrudelDemo() {
                     <div className="col-sm-5">
                         
                     </div>
-                </div>
-
+                    </div>
+                    <div><D3Graph /></div>
             </div>
             <canvas id="roll" ></canvas>
         </main >
