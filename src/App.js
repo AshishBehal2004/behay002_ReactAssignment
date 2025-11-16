@@ -140,7 +140,7 @@ export default function StrudelDemo() {
                         
                     </div>
                     </div>
-                    <div><D3Graph data={graphData} /></div>
+                    <div><D3Graph strudelData={graphData} /></div>
             </div>
             <canvas id="roll" ></canvas>
         </main >

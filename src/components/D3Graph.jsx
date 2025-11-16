@@ -10,10 +10,12 @@ function D3Graph({strudelData }) {
         if (!strudelData || strudelData.length === 0) {
             return;
         }
+        //converting the strudel log entries(received as text strings) into numbers (using .length to get length of eah string)
+        const numericDats = strudelData.map(entry => entry.length)
         const svg = d3.select(svgRef.current)
-        const barWidth = 20;
+        const barWidth = 20; 
         const svgHeight = 150;
-        const maxValue = d3.max(strudelData);
+        const maxValue = d3.max(numericDats);
 
         const yScale = d3.scaleLinear()
             .domain([0, maxValue])
@@ -24,14 +26,14 @@ function D3Graph({strudelData }) {
 
         svg
             .selectAll("rect")
-            .data(strudelData)
+            .data(numericDats)
             .enter()
             .append("rect")
             .attr("x", (d, i) => i * barWidth)
             .attr("y", d => yScale(d))
             .attr("width", barWidth - 2)
             .attr("height", d => svgHeight - yScale(d))
-            .append("fill", "skyblue");
+            .attr("fill", "skyblue");
     }, [strudelData])
 
 
@@ -43,7 +45,7 @@ function D3Graph({strudelData }) {
                     ref={svgRef}
                     width={400}
                     height={150}
-                    style={{ border: "1 px solid red" }}
+                    style={{ border: "1px solid red" }}
                 ></svg>
             </div>
         </>
