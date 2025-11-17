@@ -138,18 +138,26 @@
 }
 
 #process:hover {
-    background-color:rgb(255 170 36);
+    background-color: rgb(255 170 36);
+    transform: scale(1.08);
 }
 #process_play:hover {
+    background-color: rgb(49, 255, 202);
+    transform: scale(1.08);
 }
 #play:hover {
+    background-color: rgb(154 255 0);
+    transform: scale(1.08);
 }
-#stop:hover{
-
+#stop:hover {
+    background-color: rgb(255, 0, 119);
+    transform: scale(1.08);
 }
-#save:hover{
-
+#save:hover {
+    background-color: rgb(0, 208, 255);
+    transform: scale(1.08);
 }
-#load:hover{
-
+#load:hover {
+    background-color: rgb(229, 255, 0);
+    transform: scale(1.08);
 }

@@ -128,18 +128,18 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
             <div className='container-fluid '>
                 <div className="row p-3 g-1">
                     <div className="col">
-                        <button id="process" className="btn btn-primary btn-sm" onClick={handlePreProcess}>Preprocess</button>
+                        <button id="process" className="btn btn-primary btn-lg" onClick={handlePreProcess}>Preprocess</button>
                     </div>
                     <div className="col">
-                        <button id="process_play" className="btn btn-primary btn-sm" onClick={handleProcAndPlay}>Proc&Play</button>
+                        <button id="process_play" className="btn btn-primary btn-lg" onClick={handleProcAndPlay}>Proc&Play</button>
                     </div>
                 </div>
-                <div className="row p-3 g-1">
+                <div className="row p-2 g-1">
                     <div className="col">
-                        <button id="play" className="btn btn-primary btn-sm" onClick={onPlay}>Play</button>
+                        <button id="play" className="btn btn-primary btn-lg" onClick={onPlay}>Play</button>
                     </div>
-                    <div className="col">
-                        <button id="stop" className="btn btn-danger btn-sm" onClick={onStop} >Stop</button>
+                    <div className="col mb-2">
+                        <button id="stop" className="btn btn-danger btn-lg" onClick={onStop} >Stop</button>
                     </div>
                     <div className="col">
                         <button type='button' id="save" className="btn btn-primary btn-sm" onClick={handleSave}>SAVE CONTROLS</button>
