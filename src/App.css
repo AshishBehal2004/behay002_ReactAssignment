@@ -161,3 +161,24 @@
     background-color: rgb(229, 255, 0);
     transform: scale(1.08);
 }
+
+#djRadio {
+    width: 50px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #34A853;
+    position: relative;
+    transition: 0.3s ease-out;
+}
+#djRadio:checked {
+    transform: scale(1.15);
+    box-shadow: 0 0 12px #34A853;
+}
+#djRadio:checked::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background: white;
+    border-radius: 50%;
+}
