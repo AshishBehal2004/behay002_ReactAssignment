@@ -170,17 +170,3 @@
 }
 
 
-
-.instrument {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* space between switch + text */
-    margin: 8px 0; /* spacing between rows */
-    justify-content: center; /* centers each row horizontally */
-}
-
-    .instrument label {
-        font-size: 18px;
-        font-weight: 500;
-        color: white; /* or black depending on theme */
-    }

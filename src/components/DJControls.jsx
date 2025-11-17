@@ -28,22 +28,32 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
         }
     }
 
+    //connected to save button, performs when user clicks
     function handleSave() {
+        //storing all the features as an object that are used to store in localStorage of webpage
         const storingfeatures = {
             volumeKey: volume,
             cpmKey: cpm,
             mutedKey: muted,
         } 
+        //here i am converting the storage into string(which is necessary to store in localStorage)
         localStorage.setItem('featureSettings', JSON.stringify(storingfeatures));
+        //displaying message after click
         alert('Settings Saved!')
+        //and returning the storingfeatures(which is an object)
         return storingfeatures;
     }
 
+    //attached to Load controls, does similar as handleSave, instead it gets the item from localStorage(webpage storage) 
+    //as a string(since i did conversion in handleSave() that's why )
     function loadSaved() {
         const loadingStoredFeatures = localStorage.getItem('featureSettings');
+        //throws the alert message if nothing is insiede localStorage
         if (loadingStoredFeatures == null) {
             alert('Nothing is Saved')
         }
+         //else part handles the conversion of string to object, and accessing each object inside that to assign the value to all the features:
+        //volume, mute and cpm and then shows the message 
         else {
             const stringToObjectonvert = JSON.parse(loadingStoredFeatures);
             setVolume(stringToObjectonvert.volumeKey)
@@ -51,25 +61,32 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
             console.log("Loaded", stringToObjectonvert.mutedKey)
             setMuted(stringToObjectonvert.mutedKey)
             alert("Data is Loaded")
-            
         }
     }
 
+    //allows the user to change the cpm of the song, passes the event parameter in it which gets the value of html element where this handleCm is being called
     function handleCpm(event) {
+        //gets the element tag
         const newCpm = parseInt(event.target.value)
+        //checks if the elemnet is not isNan error(i encountered that during testing where the values in strudel editor displayed isNan, so using here),
+        //sets the cpm using useState which is declared above to update the cpm using newCpm, and then in song text it updates where there is setcps() using regex to target that specific string
         if (!isNaN(newCpm)) {
             setCpm(newCpm)
             setSongText(prev => prev.replace(/setcps\(\d+\/60\/4\)/, `setcps(${newCpm}/60/4)`))
         }
     }
 
+    //handleVolume for decreasing or inreasing
     function handleVolume(event) {
+        //converting the value which is returned as a string into float in order to change the value.
         const newVolume = parseFloat(event.target.value);
         console.log(newVolume);
+        //does the similar job of updating the current volume with newVolume
         setVolume(newVolume);
-        //all(x => x.gain(0.5))
+        //also updating the strudel editor by targeting "all(x=> x.gain(0.5))" in it , and changing only the value through regex
         setSongText(prev => prev.replace(/all\(x\s*=> x\.gain\([0-9.]+\)\)/, `all(x => x.gain(${newVolume}))`));
     }
+
 
     function handlePreProcess() {
         setSongText(curr => {
@@ -84,6 +101,7 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
     }
 
     function handleProcAndPlay() {
+        //calling the handleProcess because that handles the replacement of those <CPM> and <VOLUME> tags in the strudel editor
         handlePreProcess();
         //waiting 100 miliseconds to play, as it conflicts with onPLay()
         setTimeout(() => { onPlay() }, 100)
