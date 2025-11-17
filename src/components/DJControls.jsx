@@ -123,7 +123,8 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
                 <label className="form-check-label" htmlFor="instrument_main_arp" >
                         main_arp
                 </label>
-            </div>
+                </div>
+
             <div className='container-fluid '>
                 <div className="row p-3 g-1">
                     <div className="col">
@@ -144,10 +145,9 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
                         <button type='button' id="save" className="btn btn-primary btn-sm" onClick={handleSave}>SAVE CONTROLS</button>
                     </div>
                     <div className="col">
-                        <button type='button' id="load" className="btn btn-info btn-sm" onClick={loadSaved}><b>LOAD CONTROLS</b></button>
+                        <button type='button' id="load" className="btn btn-info btn-sm" onClick={loadSaved}>LOAD CONTROLS</button>
                     </div>
                 </div>
-               
             </div>
         </>
     );

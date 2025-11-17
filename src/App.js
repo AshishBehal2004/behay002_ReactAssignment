@@ -98,13 +98,13 @@ export default function StrudelDemo() {
         const interval = setInterval(() => {
             const StrudelData = getD3Data()
             setGraphData([...StrudelData])
-            console.log(StrudelData);
+            //console.log(StrudelData);
         }, 200)
         return () => clearInterval(interval);
     }, [])
     
     return (
-        <div>
+        <div className="AppBody">
         <nav className="navbar navbar-dark bg-dark ">
             <a className="navbar-brand fs-1" ><b><i>Strudel Demo</i></b></a>
             <div className="strudellogo" >
@@ -122,9 +122,9 @@ export default function StrudelDemo() {
                         </div>
                     </div>
                         <div className="col-sm-5" style={{ maxHeight: '50vh' }}>
-                            <div className="card text-center" id="djControls">
+                            <div className="card text-center" id="djControls" style={{ boxShadow: " 5px 10px rgba(0,0,0,0.6)" }}>
                                 <div className="card-header fs-1"><b>DJ Controls</b></div>
-                                <div className="card-body">
+                                <div className="card-body" >
                                     <h5 className="card-title"><b>Change Cpm</b></h5>
                                     <DjControls songText={songText} setSongText={setSongText} volume={volume} setVolume={setVolume} onPlay={handlePlay} onStop={handleStop} />
                                 </div>
@@ -137,19 +137,18 @@ export default function StrudelDemo() {
                         <div id="output" />
                     </div>
                     <div className="col-sm-5">
-                        
+                            <canvas id="roll" ></canvas>
                     </div>
                     </div>
-                    <div><D3Graph strudelData={graphData} /></div>
+                    <div><D3Graph strudelData={graphData} /> </div>
             </div>
-            <canvas id="roll" ></canvas>
+          
         </main >
         <footer className="footer" role="contentinfo">
             <div className="footer-content" >
                 <p className="footer-text">&copy; 2025 Strudel Demo. All rights reserved</p>
             </div>
         </footer>
-        
     </div >
 );
 
