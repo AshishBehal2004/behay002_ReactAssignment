@@ -100,30 +100,31 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
             <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider" value={volume} onChange={handleVolume} ></input>
            
             <label className='instrument-label fs-5' ><b>Toggle Instrument On/Off</b></label>
-            <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="djRadio"  onChange={handleMute('drums')} checked={muted.drums}></input>
-                <label className="form-check-label" htmlFor="djRadio" >
+            
+            <div className="form-check form-switch">
+                <input className="form-check-input" type="checkbox" value="" id="djRadioDrums"  onChange={handleMute('drums')} checked={muted.drums}></input>
+                <label className="form-check-label" htmlFor="djRadioDrums" >
                         Drums
                     </label>
             </div>
-            <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="djRadio" onChange={handleMute('drums2')} checked={muted.drums2}></input>
-                <label className="form-check-label" htmlFor="djRadio" >
+            <div className="form-check form-switch">
+                <input className="form-check-input" type="checkbox" value="" id="djRadioDrums2" onChange={handleMute('drums2')} checked={muted.drums2}></input>
+                <label className="form-check-label" htmlFor="djRadioDrums2" >
                         Drums 2
                 </label>
             </div>
-            <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="djRadio" onChange={handleMute('basslines')} checked={muted.basslines}></input>
-                <label className="form-check-label" htmlFor="djRadio" >
-                        basslines
+            <div className="form-check form-switch">
+                <input className="form-check-input" type="checkbox" value="" id="djRadioBasslines" onChange={handleMute('basslines')} checked={muted.basslines}></input>
+                <label className="form-check-label" htmlFor="djRadioBasslines" >
+                        Basslines
                 </label>
             </div>
-            <div className="form-check">
-                <input className="form-check-input" type="checkbox" value="" id="djRadio" onChange={handleMute('main_arp')} checked={muted.main_arp}></input>
-                <label className="form-check-label" htmlFor="djRadio" >
+            <div className="form-check form-switch">
+                <input className="form-check-input" type="checkbox" value="" id="djRadioMain_Arp" onChange={handleMute('main_arp')} checked={muted.main_arp}></input>
+                <label className="form-check-label" htmlFor="djRadioMain_Arp" >
                         main_arp
                 </label>
-                </div>
+            </div>
 
             <div className='container-fluid '>
                 <div className="row p-3 g-1">

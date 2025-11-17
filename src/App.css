@@ -31,7 +31,7 @@
 }
 
 .AppBody {
-    background-color: #385976;
+    background: linear-gradient(315deg, #2d3436 0%, #000000 74%);
 }
 
 
@@ -81,16 +81,23 @@
 }
 
 #djControls {
-    border-left: 4px solid #ffc107;
-    background-color: RGBA(255, 255, 224, 1);
+    border-left: 4px solid #34A853;
+    color: white;
+    padding: 30px;
+    box-shadow: -5px 12px 15px rgb(255, 255, 255, 1.00);
+    background: linear-gradient(315deg, #5A4FCF 0%, #242124 74%);
 }
-
+   
 .graph-container {
-    background: #0F0F0F;
+    background: linear-gradient(315deg, #003366 0%, #242124 74%);
     padding: 20px;
     border-radius: 25px;
-    box-shadow: 5px 12px 20px rgba(0,0,0,0.7);
+    box-shadow: 5px 12px 20px rgb(255, 255, 255, 0.82);
     margin: auto;
+}
+
+#graphHeader{
+    color:white;
 }
 
 #process {
@@ -162,23 +169,18 @@
     transform: scale(1.08);
 }
 
-#djRadio {
-    width: 50px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 3px solid #34A853;
-    position: relative;
-    transition: 0.3s ease-out;
+
+
+.instrument {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between switch + text */
+    margin: 8px 0; /* spacing between rows */
+    justify-content: center; /* centers each row horizontally */
 }
-#djRadio:checked {
-    transform: scale(1.15);
-    box-shadow: 0 0 12px #34A853;
-}
-#djRadio:checked::after {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    background: white;
-    border-radius: 50%;
-}
+
+    .instrument label {
+        font-size: 18px;
+        font-weight: 500;
+        color: white; /* or black depending on theme */
+    }

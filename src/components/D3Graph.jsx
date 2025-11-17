@@ -47,13 +47,13 @@ function D3Graph({strudelData }) {
     return (
         <>
             <div>
-                <h2 className="text-center"><b><i>D3 Graph</i></b></h2>
+                <h2 className="text-center" id="graphHeader"><b><i>D3 Graph</i></b></h2>
                 <div className="d-flex justify-content-center mb-5">
                 <div  style={{ width: "100%", maxWidth: "1000px", background: "#0F0F0F", borderRadius: "30px", boxShadow: " 4px 10px rgba(0,0,0,0.6)" }}>
                 <svg className="graph-container"
                     ref={svgRef}
                         height={150}
-                        style={{ width:"100%", border: "1px solid red", borderRadius: "30px" }}>
+                        style={{ width:"100%", border: "1px solid ", borderRadius: "30px" }}>
                 </svg>
                     </div>
                 </div>
