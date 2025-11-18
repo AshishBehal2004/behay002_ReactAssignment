@@ -113,7 +113,7 @@ export default function StrudelDemo() {
     return (
         <div className="AppBody">
         <nav className="navbar navbar-dark bg-dark ">
-            <a className="navbar-brand fs-1" ><b><i>Strudel Demo</i></b></a>
+            <a className="navbar-brand fs-1" ><b><i>Strudel DJ Beats Maker</i></b></a>
             <div className="strudellogo" >
                 <img className="strudelAnimation" src={strudelImage} alt="Strudel Icon" style={{ width: '50px' }}></img>
             </div>

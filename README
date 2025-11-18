@@ -1,0 +1,40 @@
+
+# STRUDEL DJ BEATS MAKER
+
+ STRUDEL DJ BEATS MAKER is an interactive web-based music production tool that allows 
+users to create and manipulate beats in real-time using the Strudel live coding engine. 
+
+Built with React and Bootstrap, this application provides a unique DJ-style control panel where users can dynamically adjust cpm, control volume, and toggle individual instrument tracks to craft unique musical compositions. Whether you're experimenting 
+with different rhythms or fine-tuning your perfect beat, the DJ Controls interface is ther to make music production accessible and fun.
+
+## Controls Guide
+CPM Slider: Its a range slider which allows the user to increase/decrease the cpm by dragging the slider.
+
+Volume Slider: Also a range slider but instead allows to increase/decrease the volume of the beat.
+
+Toggle Switches: It allows the users to turn switch on/off when clicked for each four instruments: drums, drums2, basslines and main_arp.
+
+PreProcess Button: It removes those <CPM> and <VOLUME> tags present in text editor and replaces them with actual default values with 140(for cpm) and 0.5(for volume)
+
+Proc&Play Button: It does the same as PreProcess Button but along with that it also plays the beat.
+
+Play Button: It Starts playing the beat when clicked 
+
+Stop Button: It Stops the beat from playing when clicked.
+
+Save Settings: Giving users the ability to save the changes they made in DJ controls, whether on/off switches, moving range slider to minimum or maximum.
+
+Load Settings: Allows the users to load already saved settings for the DJ Controls.
+## Usage Guidelines
+1. In Order to play the beat, users have to click on preprocess button, to remove the tags(<CPM> and <VOLUME> tag from strudel editor) or they can just click proc&play to do the same with just one button. 
+
+2. To Load the Setting, users have to save the settings first otherwise it will show alert saying "Nothing is Saved".
+
+3. The cpm will also update live when the beat is being played, same goes for the volume slider, instrument switches. 
+
+## Live Video Demo Link:
+https://youtu.be/fLHISSbajK4
+
+## Known Issues
+
+There is one bug that I encountered which happens randomly, where it says unable to evaluate when user presses play(before preprocessing) or procplay. As it was only showing during development, and now it is not showing so I am still looking into it.
