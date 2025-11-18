@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 export default function DjControls({ songText, setSongText, volume, setVolume, onPlay, onStop }) {
+
+    //useState that will be controlled in below functions and passed as element in html tags 
     const [muted, setMuted] = useState({
         drums: false,
         drums2: false,
@@ -8,19 +11,23 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
     })
     const [cpm, setCpm] = useState(140);
 
-    
-
+ 
+    //Handles the mute logic through switch, takes sectionName as parameter which targets the instrument
     function handleMute(sectionName) {
         return (event) => {
+            //reads the state of the checkbox and changes the state of the shouldbeMuted by assigned it isChecked
             const isChecked = event.target.checked
             const shouldBeMuted = isChecked
+            //updates the previous value of muted with new value by copying it(through "..."spread operator), and updates the boolean value as well(true or false for each instrument)
             setMuted(prev => ({
                 ...prev, [sectionName]: shouldBeMuted
             }));
+            //here, it checks if shouldbeMuted is true, it prints the sectionName in console, and updates the songText state(using setSongText) by adding "_" in beginning of sectionName 
             if (shouldBeMuted) {
                 console.log("Muting", sectionName)
                 setSongText(prev => prev.replace(sectionName + ':' , '_' + sectionName + ':'));
             }
+            //here it does the oppsoite of if statement, instead the setSongText will remove the "_" from the sectionName
             else {
                 setSongText(prev => prev.replace('_'+ sectionName + ':', sectionName + ':'));
             }
@@ -110,35 +117,35 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
         <>  
             <div className="mb-3">
                 <label >{cpm}</label>
-                <input type="range" className="form-range" id="cpm_textInput" aria-describedby="cpmLabel" value={cpm} onChange={handleCpm} data-bs-toggle="tooltip" data-bs-placement="top" title="Drag the slider to increase/decrease the Cpm" min='1' max='300'></input>
+                <input type="range" className="form-range" id="cpm_textInput" aria-describedby="cpmLabel" value={cpm} onChange={handleCpm} data-bs-toggle="tooltip"  title="Drag the slider to increase/decrease Cpm" min='1' max='300'></input>
             </div>
             <label htmlFor="volumeSlider" className="form-label fs-5" ><b>Volume </b></label>
             <br></br>
             <label>{volume}</label>
-            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider" value={volume} onChange={handleVolume} ></input>
+            <input type="range" className="form-range" min="0" max="1" step="0.01" id="volumeSlider" value={volume} onChange={handleVolume} data-bs-toggle="tooltip" title="Drag the slider to increase/decrease Volume"></input>
            
             <label className='instrument-label fs-5' ><b>Toggle Instrument On/Off</b></label>
             
             <div className="form-check form-switch">
-                <input className="form-check-input" type="checkbox" value="" id="djRadioDrums"  onChange={handleMute('drums')} checked={muted.drums}></input>
+                <input className="form-check-input" type="checkbox" value="" id="djRadioDrums" onChange={handleMute('drums')} checked={muted.drums} data-bs-toggle="tooltip" title="Toggle Dums On/Off"></input>
                 <label className="form-check-label" htmlFor="djRadioDrums" >
                         Drums
                     </label>
             </div>
             <div className="form-check form-switch">
-                <input className="form-check-input" type="checkbox" value="" id="djRadioDrums2" onChange={handleMute('drums2')} checked={muted.drums2}></input>
+                <input className="form-check-input" type="checkbox" value="" id="djRadioDrums2" onChange={handleMute('drums2')} checked={muted.drums2}  data-bs-toggle="tooltip" title="Toggle Dums 2 On/Off"></input>
                 <label className="form-check-label" htmlFor="djRadioDrums2" >
                         Drums 2
                 </label>
             </div>
             <div className="form-check form-switch">
-                <input className="form-check-input" type="checkbox" value="" id="djRadioBasslines" onChange={handleMute('basslines')} checked={muted.basslines}></input>
+                <input className="form-check-input" type="checkbox" value="" id="djRadioBasslines" onChange={handleMute('basslines')} checked={muted.basslines} data-bs-toggle="tooltip" title="Toggle Basslines On/Off" ></input>
                 <label className="form-check-label" htmlFor="djRadioBasslines" >
                         Basslines
                 </label>
             </div>
             <div className="form-check form-switch">
-                <input className="form-check-input" type="checkbox" value="" id="djRadioMain_Arp" onChange={handleMute('main_arp')} checked={muted.main_arp}></input>
+                <input className="form-check-input" type="checkbox" value="" id="djRadioMain_Arp" onChange={handleMute('main_arp')} checked={muted.main_arp}  data-bs-toggle="tooltip" title="Toggle main_arp On/Off"></input>
                 <label className="form-check-label" htmlFor="djRadioMain_Arp" >
                         main_arp
                 </label>
@@ -147,24 +154,24 @@ export default function DjControls({ songText, setSongText, volume, setVolume, o
             <div className='container-fluid '>
                 <div className="row p-3 g-1">
                     <div className="col">
-                        <button id="process" className="btn btn-primary btn-lg" onClick={handlePreProcess}>Preprocess</button>
+                        <button id="process" className="btn btn-primary btn-lg" onClick={handlePreProcess}data-bs-toggle="tooltip" data-tip="Removes And Replaces <CPM> and <VOLUME> tag from Text Editor With Actual Values">Preprocess</button>
                     </div>
                     <div className="col">
-                        <button id="process_play" className="btn btn-primary btn-lg" onClick={handleProcAndPlay}>Proc&Play</button>
+                        <button id="process_play" className="btn btn-primary btn-lg" onClick={handleProcAndPlay}data-bs-toggle="tooltip" title="Removes <CPM> and <VOLUME> tag from Text Editor With Actual Values And Plays The Beat">Proc&Play</button>
                     </div>
                 </div>
                 <div className="row p-2 g-1">
                     <div className="col">
-                        <button id="play" className="btn btn-primary btn-lg" onClick={onPlay}>Play</button>
+                        <button id="play" className="btn btn-primary btn-lg" onClick={onPlay}  data-bs-toggle="tooltip" title="Click to Play The Beat">Play</button>
                     </div>
                     <div className="col mb-2">
-                        <button id="stop" className="btn btn-danger btn-lg" onClick={onStop} >Stop</button>
+                        <button id="stop" className="btn btn-danger btn-lg" onClick={onStop} data-bs-toggle="tooltip" title="Click to Stop The Beat" >Stop</button>
                     </div>
                     <div className="col">
-                        <button type='button' id="save" className="btn btn-primary btn-sm" onClick={handleSave}>SAVE CONTROLS</button>
+                        <button type='button' id="save" className="btn btn-primary btn-sm" onClick={handleSave} data-bs-toggle="tooltip" title="Save The DJ Controls Settings">Save Settings</button>
                     </div>
                     <div className="col">
-                        <button type='button' id="load" className="btn btn-info btn-sm" onClick={loadSaved}>LOAD CONTROLS</button>
+                        <button type='button' id="load" className="btn btn-info btn-sm" onClick={loadSaved}data-bs-toggle="tooltip" title="Loads Previosuly Saved Settings">Load Settings</button>
                     </div>
                 </div>
             </div>

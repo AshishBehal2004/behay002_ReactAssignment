@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\djcontrols.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\components\\d3graph.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\d3graph.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|c:\\users\\asus\\documents\\github\\behay002_reactassignment\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +26,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 265,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "tunes.js",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\tunes.js",
-              "RelativeDocumentMoniker": "src\\tunes.js",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\tunes.js",
-              "RelativeToolTip": "src\\tunes.js",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-06T03:05:24.798Z"
+              "Title": "D3Graph.jsx",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\D3Graph.jsx",
+              "RelativeDocumentMoniker": "src\\components\\D3Graph.jsx",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\D3Graph.jsx",
+              "RelativeToolTip": "src\\components\\D3Graph.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-17T09:25:52.161Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.css",
+              "RelativeDocumentMoniker": "src\\App.css",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.css",
+              "RelativeToolTip": "src\\App.css",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAIwKsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-16T02:27:40.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "App.js",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.js",
               "RelativeDocumentMoniker": "src\\App.js",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\App.js",
               "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwGoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-04T00:01:07.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T00:01:07.198Z"
             },
             {
               "$type": "Document",
@@ -57,7 +73,7 @@
               "RelativeDocumentMoniker": "src\\components\\DJControls.jsx",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\behay002_ReactAssignment\\src\\components\\DJControls.jsx",
               "RelativeToolTip": "src\\components\\DJControls.jsx",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAwwJIAAAB8AAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAiwIUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-11-04T08:58:40.792Z",
               "EditorCaption": ""

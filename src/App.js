@@ -79,7 +79,7 @@ export default function StrudelDemo() {
                     );
                     await Promise.all([loadModules, registerSynthSounds(), registerSoundfonts()]);
                 },
-            });
+            }); 
             document.getElementById('proc').value = stranger_tune
         }
         if (globalEditor) {
