@@ -14,13 +14,15 @@ import console_monkey_patch, { getD3Data } from './console-monkey-patch';
 import DjControls from './components/DJControls';
 import PreProcessTextBody from './components/PreProcessTextBody';
 import D3Graph from './components/D3Graph';
-//image logo appearing on page
+//image logo appearing on page  
 import strudelImage from './icons/strudel_icon.png';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 let globalEditor = null;
 
 const handleD3Data = (event) => {
     console.log(event.detail);
 };
+
 
 export default function StrudelDemo() {
 
